@@ -1,9 +1,11 @@
 import "./App.css";
+import React from "react";
+import { DrumMachine } from "./components/DrumMachine";
 
 function App() {
   return (
     <div className="App">
-      <h1>app</h1>
+      <DrumMachine />
     </div>
   );
 }
