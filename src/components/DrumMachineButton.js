@@ -8,8 +8,15 @@ export const DrumMachineButton = ({
 }) => {
   return (
     <div id="drum-machine-button">
-      <button className="drum-pad" id={id}>
-        {displayValue}
+      <button
+        className="drum-pad"
+        id={id}
+        onClick={() => {
+          let audio = new Audio(audioUrl);
+          audio.play();
+        }}
+      >
+        {buttonLabel}
       </button>
     </div>
   );
