@@ -4,6 +4,10 @@ import drumPadProperties from "../constants/drumPadProperties";
 import { DrumMachineButton } from "./DrumMachineButton";
 
 export const DrumPad = () => {
+  const playAudio = (audioUrl) => {
+    let audio = new Audio(audioUrl);
+    audio.play();
+  };
   return (
     <div>
       {drumPadProperties.map(({ id, buttonLabel, audioUrl, displayValue }) => {
@@ -11,7 +15,7 @@ export const DrumPad = () => {
           <DrumMachineButton
             id={id}
             buttonLabel={buttonLabel}
-            audioUrl={audioUrl}
+            playAudio={() => playAudio(audioUrl)}
             displayValue={displayValue}
           />
         );

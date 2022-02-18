@@ -1,21 +1,19 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 export const DrumMachineButton = ({
   id,
   buttonLabel,
-  audioUrl,
+  playAudio,
   displayValue,
 }) => {
+  const handleKeyPress = ({ key }) => {
+    if (key) {
+      console.log(key);
+    }
+  };
   return (
     <div id="drum-machine-button">
-      <button
-        className="drum-pad"
-        id={id}
-        onClick={() => {
-          let audio = new Audio(audioUrl);
-          audio.play();
-        }}
-      >
+      <button className="drum-pad" id={id} onClick={playAudio}>
         {buttonLabel}
       </button>
     </div>
