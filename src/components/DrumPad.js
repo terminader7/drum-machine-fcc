@@ -6,8 +6,15 @@ import { DrumMachineButton } from "./DrumMachineButton";
 export const DrumPad = () => {
   return (
     <div>
-      {drumPadProperties.map(({ id, textValue }) => {
-        return <DrumMachineButton id={id} textValue={textValue} />;
+      {drumPadProperties.map(({ id, buttonLabel, audioUrl, displayValue }) => {
+        return (
+          <DrumMachineButton
+            id={id}
+            buttonLabel={buttonLabel}
+            audioUrl={audioUrl}
+            displayValue={displayValue}
+          />
+        );
       })}
     </div>
   );
