@@ -6,11 +6,15 @@ export const DrumMachineButton = ({
   playAudio,
   displayValue,
 }) => {
-  const handleKeyPress = ({ key }) => {
-    if (key) {
-      console.log(key);
-    }
-  };
+  useEffect(() => {
+    const keyDownHandler = ({ key }) => {
+      if (key.toUpperCase() === id) {
+        playAudio();
+      }
+    };
+    window.addEventListener("keydown", keyDownHandler);
+    return () => window.removeEventListener("keydown", keyDownHandler);
+  }, []);
   return (
     <div id="drum-machine-button">
       <button className="drum-pad" id={id} onClick={playAudio}>
