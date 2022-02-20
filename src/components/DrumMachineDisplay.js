@@ -1,5 +1,9 @@
-import { useState } from "react";
+import React from "react";
 
-export const DrumMachineDisplay = () => {
-  const [prevText, newText] = useState("");
+export const DrumMachineDisplay = ({ displayText }) => {
+  return (
+    <div id="display">
+      <p>{displayText}</p>
+    </div>
+  );
 };

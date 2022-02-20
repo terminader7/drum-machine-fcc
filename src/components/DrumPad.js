@@ -3,7 +3,7 @@ import React from "react";
 import drumPadProperties from "../constants/drumPadProperties";
 import { DrumMachineButton } from "./DrumMachineButton";
 
-export const DrumPad = () => {
+export const DrumPad = ({ setDisplayText }) => {
   const playAudio = (audioUrl) => {
     let audio = new Audio(audioUrl);
     audio.play();
@@ -17,6 +17,8 @@ export const DrumPad = () => {
             buttonLabel={buttonLabel}
             playAudio={() => playAudio(audioUrl)}
             displayValue={displayValue}
+            key={id}
+            setDisplayText={setDisplayText}
           />
         );
       })}
