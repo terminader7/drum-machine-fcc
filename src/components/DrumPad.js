@@ -9,7 +9,7 @@ export const DrumPad = ({ setDisplayText }) => {
     audio.play();
   };
   return (
-    <div>
+    <div className="drum-pad">
       {drumPadProperties.map(({ id, buttonLabel, audioUrl, displayValue }) => {
         return (
           <DrumMachineButton

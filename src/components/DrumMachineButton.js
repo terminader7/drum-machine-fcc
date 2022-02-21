@@ -18,17 +18,15 @@ export const DrumMachineButton = ({
     return () => window.removeEventListener("keydown", keyDownHandler);
   }, []);
   return (
-    <div id="drum-machine-button">
-      <button
-        className="drum-pad"
-        id={id}
-        onClick={() => {
-          playAudio();
-          setDisplayText(displayValue);
-        }}
-      >
-        {buttonLabel}
-      </button>
-    </div>
+    <button
+      className="drum-machine-button"
+      id={id}
+      onClick={() => {
+        playAudio();
+        setDisplayText(displayValue);
+      }}
+    >
+      {buttonLabel}
+    </button>
   );
 };
