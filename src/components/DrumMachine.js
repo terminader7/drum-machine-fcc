@@ -8,9 +8,13 @@ export const DrumMachine = () => {
 
   return (
     <div id="drum-machine">
-      <h1>Drum App</h1>
-      <DrumPad setDisplayText={setDisplayText} />
-      <DrumMachineDisplay displayText={displayText} />
+      <div>
+        <h1 id="app-header">Drum App</h1>
+      </div>
+      <div className="drum-machine-content">
+        <DrumPad setDisplayText={setDisplayText} />
+        <DrumMachineDisplay displayText={displayText} />
+      </div>
     </div>
   );
 };
