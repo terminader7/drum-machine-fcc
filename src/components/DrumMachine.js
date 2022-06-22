@@ -9,7 +9,7 @@ export const DrumMachine = () => {
   return (
     <div id="drum-machine">
       <div>
-        <h1 id="app-header">Drum App</h1>
+        <h1 id="app-header">Drum Machine</h1>
       </div>
       <div className="drum-machine-content">
         <DrumPad setDisplayText={setDisplayText} />
